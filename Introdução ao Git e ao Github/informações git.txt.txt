@@ -1,0 +1,125 @@
+git config
+
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+git help
+
+git help {comando}
+git {comando} --help
+man git- {comando}
+
+Criando o projeto
+
+git init
+
+Caso você esteja iniciando o monitoramento de um 
+projeto existente com Git, você precisa ir 
+para o diretório do projeto e digitar
+
+Isso cria um novo 
+subdiretório chamado .git que contem todos 
+os arquivos necessários de seu repositório 
+— um esqueleto de repositório Git.
+Neste ponto, nada em seu projeto é monitorado.
+
+Caso você queira começar a controlar o versionamento
+dos arquivos existentes (diferente de um diretório 
+vazio), você provavelmente deve começar a monitorar 
+esses arquivos e fazer um commit inicial. 
+Você pode realizar isso com poucos comandos
+touch .gitignore
+git add .gitignore
+git commit -m "Versão inicial do projeto"
+
+
+git clone 
+
+Clonar um repositório - git clone colar link
+
+git add .
+
+Para passar a monitorar um novo arquivo, use
+ o comando git add. Para monitorar o arquivo
+ README, você pode rodar isso:
+git add README
+
+git status
+O comando lhe mostra em qual branch você se encontra
+
+git diff
+mostra as linhas exatas que foram adicionadas e removidas
+- o patch, por assom dizer
+
+git diff --cached
+
+
+git commit
+Se usa o commit depois de já ter feito o git add, 
+para fazer o commit:
+
+git commit -m "Mensagem"
+
+Para commitar também os arquivos versionados mesmo 
+não estando no Stage basta adicionar o parâmetro 
+-a
+
+git commit -a -m "Mensagem"
+
+Refazendo commit quando esquecer de adicionar um 
+arquivo no Stage:
+
+git commit -m "Mensagem" --amend
+O amend é destrutivo e só deve ser
+ utilizado antes do commit ter sido enviado
+ ao servidor remoto.
+
+git reset
+desfazer
+
+Para voltar ao último commit:
+
+git reset --hard HEAD~1
+Para voltar ao último commit e mantém os últimos arquivos no Stage:
+
+git reset --soft HEAD~1
+Volta para o commit com a hash XXXXXXXXXXX:
+
+git reset --hard XXXXXXXXXXX
+Recuperando commit apagado pelo git reset
+Para visualizar os hashs
+
+git reflog
+E para aplicar:
+
+git merge {hash}
+
+git rm
+remover arquivo do Git
+git rm -f {arquivo}
+
+git mv
+git mv arquivo_origem arquivo_destino
+
+git branch
+o nome padrão é master
+git branch e o nome do arquivo
+Para mudar o branch 
+git checkout nome do arquivo
+
+Git log
+depois de clonar um repositorio de commits
+existente, ver o que aconteceu
+
+Git pull
+incorpora as alterações de um repositório
+remoto no branch atual
+
+git pull origin develop
+
+Git push
+transfere commits do seu repositório local
+para um repositório remoto
+
+git push origin develop
+
