@@ -1,0 +1,4 @@
+Lonk para download ao Git:https://git-scm.com/
+Git Bash é um terminal estendido para otimizar o uso do Gith
+
+git clone
